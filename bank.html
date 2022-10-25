@@ -11,34 +11,51 @@
       <a href="./index.html">home</a>
       <a class="active" href="./bank.html">bank</a>
       <a href="./store.html">store</a>
-      <span>$0</span>
+      <span id="balance">0</span><span>$</span></span>
       <span id="currTime"></span>
     </div>
     <br> <br> <br>
     <table class="padding-table-columns">
-        <tr>
-          <td>
-            <div class="bg column">
-              <img src="images/bankbg.png"/>
-            </div>
-          </td>
-          </td>
-          <td>
-            <div class="container">
-                <div id="progressBar">
-                 <div id="progressBarFull">0/6</div>     
-                </div>
-            </div>
-            <br>
-            <button>info</button>
-            <br>
-            <button id="claimButton">claim</button>
-            <br>
-            <button></button>
-          </td>
-        </tr>
-      </table>
+      <tr>
+        <td>
+          <div class="bg column">
+            <img src="images/bankbg.png"/>
+          </div>
+        </td>
+        </td>
+        <td>
+          <div class="container">
+              <div id="progressBar">
+                <div id="progressBarFull">0/6</div>     
+              </div>
+          </div>
+          <br>
+          <button id="bankInfoButton">info</button>
+          <br>
+          <button id="claimButton">claim</button>
+          <br>
+          <button></button>
+        </td>
+      </tr>
+    </table>
 
-    <script src="scripts.js"></script>
+    <div id="bankInfoPopup" class="popup">
+      <div class = "insidePopup">
+        <span class="close" id="closeBankInfo">&times;</span>
+        <p>claim $1 for every 10 minutes of physical activity.</p>
+        <p>aim for at least 30 minutes of exercise daily.</p>
+        <p>a maximum of $12 can be claimed per day.</p>
+      </div>
+    </div>
+
+    <div id="claimPopup" class="popup">
+      <div class = "insidePopup">
+        <span class="close" id="closeClaim">&times;</span>
+        <p>claim $1 for 10 minutes of physical activity.</p>
+        <button id="confirmed">confirm</button>
+      </div>
+    </div>
+
+    <script src="js/bank.js" defer></script>
   </body>
 </html>

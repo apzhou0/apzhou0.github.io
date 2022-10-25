@@ -11,7 +11,7 @@
       <a href="./index.html">home</a>
       <a href="./bank.html">bank</a>
       <a class="active" href="./store.html">store</a>
-      <span>$0</span>
+      <span id="balance">0</span><span>$</span></span>
       <span id="currTime"></span>
     </div>
     <br> <br> <br>
@@ -30,7 +30,7 @@
                 </div>
             </div>
             <br>
-            <button>info</button>
+            <button id="descriptionButton">description</button>
             <br>
             <button>buy</button>
             <br>
@@ -39,6 +39,13 @@
         </tr>
       </table>
 
-    <script src="scripts.js"></script>
+      <div id="descriptionPopup" class="popup">
+        <div class = "insidePopup">
+          <span class="close" id="closeDescription">&times;</span>
+          <p>description here</p>
+        </div>
+      </div>
+
+      <script src="js/store.js" defer></script>
   </body>
 </html>

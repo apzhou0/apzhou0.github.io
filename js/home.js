@@ -27,37 +27,34 @@ function afterPet() {
   document.getElementById("emote").removeChild(elem);
 }
 
-var feedPopup = document.getElementById("feedPopup");
-var feedButton = document.getElementById("feedButton");
-var closeFeed = document.getElementById("closeFeed");
-feedButton.onclick = function() {
+let feedPopup = document.getElementById("feedPopup");
+let feedButton = document.getElementById("feedButton");
+let closeFeed = document.getElementById("closeFeed");
+feedButton.onclick = () => {
   feedPopup.style.display = "block";
 }
-closeFeed.onclick = function() {
+closeFeed.onclick = () => {
   feedPopup.style.display = "none";
 }
-window.onclick = function(event) {
-  if (event.target == feedPopup) {
-    feedPopup.style.display = "none";
-  }
-  else if (event.target == invenPopup) {
-    invenPopup.style.display = "none";
-  }
-}
 
-var invenPopup = document.getElementById("invenPopup");
-var invenButton = document.getElementById("invenButton");
-var closeInven = document.getElementById("closeInven");
-invenButton.onclick = function() {
+let invenPopup = document.getElementById("invenPopup");
+let invenButton = document.getElementById("invenButton");
+let closeInven = document.getElementById("closeInven");
+invenButton.onclick = () => {
   invenPopup.style.display = "block";
 }
 closeInven.onclick = function() {
   invenPopup.style.display = "none";
 }
 
-
-
-
+window.onclick = function(event) {
+  if (event.target === feedPopup) {
+    feedPopup.style.display = "none";
+  }
+  if (event.target === invenPopup) {
+    invenPopup.style.display = "none";
+  }
+}
 
 /*myImage.onclick = () => {
   const mySrc = myImage.getAttribute('src');
