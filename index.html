@@ -2,17 +2,61 @@
 <html lang="en-US">
   <head>
     <meta charset="utf-8">
-    <title>My test page</title>
-    <link href="styles/style.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <title>Physical Activity Pet</title>
+    <link href="style.css" rel="stylesheet">
   </head>
   <body>
-    <h1>HI</h1>
-    <p>Hello, this is a website</p>
-    <img src="images/treee.png" alt="Tree">
-    <a href = "https://www.google.com">Click here</a>
-    <p>Hello, this is a website</p>
-    <button>Change user</button>
-    <script src="scripts/main.js"></script>
+    <h1>physical activity pet</h1>
+    <div class="topnav">
+      <a class="active" href="./index.html">home</a>
+      <a href="./bank.html">bank</a>
+      <a href="./store.html">store</a>
+      <span id = "balance">$0</span>
+      <span id="currTime"></span>
+    </div>
+    <br> <br> <br>
+    <table class="padding-table-columns">
+      <tr>
+        <td>
+          <div class="bg column">
+            <img src="images/farmbg.png"/>
+            <div class="inner">
+              <img id = "hen" src="images/hen.png"/>
+              <div class="inner2" id="emote"></div>
+            </div>
+          </div>
+        </td>
+        </td>
+        <td>
+          <div class="container">
+            <div id="progressBar">
+             <div id="progressBarFull"> 0/6</div>     
+            </div>
+          </div>
+          <br>
+          <button id="feedButton">feed</button>
+          <br>
+          <button id="petButton">pet</button>
+          <br>
+          <button id="invenButton">items</button>
+        </td>
+      </tr>
+    </table>
+
+    <div id="feedPopup" class="popup">
+      <div class = "insidePopup">
+        <span class="close" id="closeFeed">&times;</span>
+        <p>food items here</p>
+      </div>
+    </div>
+
+    <div id="invenPopup" class="popup">
+      <div class = "insidePopup">
+        <span class="close" id="closeInven">&times;</span>
+        <p>all items here</p>
+      </div>
+    </div>
+
+    <script src="scripts.js"></script>
   </body>
 </html>
