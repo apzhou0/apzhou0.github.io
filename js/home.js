@@ -22,6 +22,7 @@ pet.onclick = () => {
   elem.id = "heart";
   setTimeout(afterPet, 1000);
 }
+
 function afterPet() {
   var elem = document.getElementById("heart");
   document.getElementById("emote").removeChild(elem);
